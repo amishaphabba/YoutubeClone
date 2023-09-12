@@ -1,0 +1,610 @@
+*{
+    margin: 0px;
+    font-family:'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+.flex-div{
+    display: flex;
+    align-items: center;
+}
+
+.for-i{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.on-active:active{
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+nav{ 
+    padding: 5px 15px;
+    height: 60px;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0%;
+    z-index: 100; 
+}
+
+.nav-left{
+    padding-left: 8px;
+}
+
+.nav-left img{
+    margin-left: 10px;
+    height: 50px;
+}
+
+.nav-middle .search-box{
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.nav-middle button{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 60px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: none;
+}
+
+.nav-middle input{
+    width: 400px;
+    padding: 5px;
+    border-radius: 25px;
+    border: none;
+}
+
+.nav-middle input:focus{
+    outline: none;
+}
+
+.nav-middle i{
+    margin-left: 5px;
+}
+
+/* sidebar */
+
+.sidebar{
+    height: 100vh;
+    padding-left: 15px;
+    width: 210px;
+    position: fixed;
+    top: 0;
+    padding-top: 60px;
+    background-color: white;
+}
+
+.sidebar span, .small-sidebar span{
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-inside-sidebar{
+    margin: 5px 15px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+}
+
+.links a{
+   padding: 5px;
+   margin: 5px;
+   display: flex;
+   align-items: center;
+}
+
+.links a:first-child{
+    margin-top: 20px;
+}
+
+.links a i{
+    margin-right: 10px;
+}
+
+.sidebar a:hover, .sidebar .active{
+    background-color: #C0C0C0;
+    border-radius: 10px;
+}
+
+.side-bar hr{
+    height: 1px;
+    margin: 10px 0px;
+    width: 85%;
+}
+
+.subscribed-list{
+    display: flex;
+    flex-direction:column ;
+}
+
+.subscribed-list h3{
+    margin: 10px;
+    color: #5a5a5a;
+}
+
+.subscribed-list a{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    /* width: fit-content;
+    flex-wrap: wrap; */
+}
+
+.subscribed-list a img{
+    margin-right: 10px;
+}
+
+.subscribed-list img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.small-sidebar{
+    height: 100vh;
+    padding: 0px;
+    width: 80px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    padding-top: 60px;
+}
+
+.small-sidebar a{
+    flex-direction: column;
+    font-size: 10px;
+    margin: 10px 2px;
+    padding: 5px 0px;
+}
+
+.small-sidebar .smallbar-logo{
+    display: none;
+}
+
+.small-sidebar a i {
+    margin-right: 0px;
+}
+
+.small-sidebar .subscribed-list{
+    display: none;
+}
+
+.small-sidebar hr{
+    display: none;
+}
+
+/* main */
+
+.container{
+    background-color: #f9f9f9;
+    padding: 10px 10px 10px 220px;
+}
+
+.large-container{
+    padding: 10px 10px 10px 90px;
+}
+
+.banner{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.banner p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: x-large;
+    padding: 20px;
+    padding-left: 80px;
+    font-weight: 900;
+}
+
+.banner a{
+    cursor: pointer;
+    background-color: rgb(81, 127, 226);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: large;
+    width: fit-content;
+}
+
+.banner p a:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.container .banner img{
+    width: 60%;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.large-container .banner img{
+    width: 50%;
+}
+
+.list-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 10px;
+}
+
+.vid-list a img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* on hover image increases its size (for large container) */
+.large-container .vid-list a img:hover{
+    transform: scale(1.07,1.07);
+}
+
+/* on hover image increases its size (for normal container) */
+.vid-list a img:hover{
+    transform: scale(1.05,1.05);
+}
+
+.vid-list .author{
+    align-items: flex-start;
+    margin-top: 5px;
+}
+
+.vid-list .author img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.vid-info{
+    padding-left:15px;
+    color: #5a5a5a;
+    font-size: 15px;
+    max-width: 250px;
+}
+
+.list-container .vid-info a{
+    overflow: hidden;
+    word-wrap: break-word;  /* If not used- ellipsis will not work as the word has not been completed yet */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2; 
+    max-height: 50%;
+}
+
+.list-container .vid-info p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* This value makes the white-space have the same effect as <pre> tag in HTML. The content in the element will wrap only when specified using line breaks. */
+    white-space: pre;
+}
+
+.vid-info a{
+    color: #000;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media (max-width:900px) {
+    .sidebar{
+        display: none;
+    }
+
+    .nav-left i{
+        display: none;
+    }
+
+    .large-container, .container{
+        padding: 5%;
+    }
+
+    .nav-right i{
+        display: none;
+    }
+
+    .nav-right i:last-child{
+        display: block;
+        font-size: 40px;
+    }
+
+    .nav-middle input{
+        width: 200px;
+    }
+
+    .nav-middle button{
+        width: 30px;
+    }
+
+    .nav-middle .mic-icon{
+        display: none;
+    }
+
+    nav, .nav-left{
+        padding: 0px;
+    }
+
+    .nav-left img{
+        margin: 0px;
+    }
+
+    .banner p{
+        padding: 20px;
+    }
+}
+
+@media (max-width:400px){
+    .nav-middle input{
+        width: 100px;
+    }
+}
+
+/*---------------- Play video page------------------- */
+
+.play-container{
+    padding-left: 2%;
+}
+
+.play-container .small-sidebar{
+    flex-basis: 10%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.play-vid{
+    flex-basis: 64%;
+}
+
+.right-sidebar{
+    flex-basis: 34%;
+    max-width: 34%;
+}
+
+.play-vid video{
+    width: 100%;
+}
+
+.side-video-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.side-video-list .small-thumbnail{
+    flex-basis: 49%;
+}
+
+.side-video-list .small-thumbnail img{
+    width: 100%;
+}
+
+.right-sidebar .side-video-list .small-thumbnail img:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.side-video-list .vid-info{
+    flex-basis: 49%;
+    max-width: 49%;     /* even if title is longer it will just take 49% of width and not complete 100% or else it would make thumbnail  */
+}
+
+.side-video-list .vid-info a{
+    overflow: hidden;
+    word-wrap: break-word;   /* If not used ellipsis will not work as the word has not been completed yet */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2; 
+    max-height: 50%;
+}
+
+.play-vid .tags a{
+    color: #0000ff;
+}
+
+.play-vid h3{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.play-vid .play-video-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    color: #5a5a5a;
+}
+
+.play-video-info div a img{
+    height: 22px;
+    margin-right: 8px;
+
+}
+
+.play-vid .play-video-info div a{
+    display: inline-flex;
+    align-items: center;
+}
+
+.play-vid hr{
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+.publisher{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.publisher div{
+    line-height: 18px;
+    flex: 1;  /* gives remaining space - the width of all other elements will be the same as their content, but the element with flex: 1 will be given the remaining full space. The larger the flex given, the higher the ratio of space a component will take compared to its siblings  */
+}
+
+.publisher img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.publisher div p{
+    font-weight: 600;
+    font-size: large;
+}
+
+.publisher div span{
+    font-size: 13px;
+    color: #5a5a5a;
+}
+
+.publisher button{
+    border: 0;
+    background-color: rgb(236, 54, 54);
+    padding: 8px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+}
+
+.video-description{
+    padding-left: 42px;
+    margin: 15px 0px;
+    /* background-color: #; */
+}
+
+.video-description p{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #5a5a5a;
+}
+
+.video-description h4{
+    font-size: 14px;
+    color: #5a5a5a;
+    margin-top: 15px;
+}
+
+.add-comment{
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+/* global styling for image used as channel logo  */
+.img-channel-logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.add-comment input{
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+    width: 100%;
+    /* flex: 1; */
+    background: transparent;
+}
+
+.older-comments{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.older-comments h3{
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.older-comments h3 span{
+    font-size: 12px;
+    font-weight: 500;
+    color: #5a5a5a;
+    margin-left: 8px;
+}
+
+.older-comments .comment-action{
+    display: inline-flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.older-comments .comment-action img{
+    cursor: pointer;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.older-comments .comment-action span{
+    width: 20px;
+    margin-right: 20px;
+    color: #5a5a5a;
+}
+
+.older-comments .comment-action a{
+    margin-left: 30px;
+    color: #0000ff;
+}
+
+@media (max-width: 900px){
+    .play-vid{
+        flex-basis: 100%;
+    }
+
+    .right-sidebar{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .play-container{
+        padding-left: 5%;
+    }
+
+    .video-description{
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 566px){
+    .play-vid .play-video-info div a{
+        margin-top: 10px;
+    }
+}
