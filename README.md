@@ -7,7 +7,7 @@ Note: All images and channel names used here are just for study purpose and they
   ![HomePage](https://github.com/amishaphabba/YoutubeClone/assets/75721242/206065e8-d87a-458d-855c-8a0d41dff13f)
 
 
-2. Home page with small side bar (video thumbnails re arrange on the basis of side bar) 
+2. Home page with smaller side bar
 ![HomePage2](https://github.com/amishaphabba/YoutubeClone/assets/75721242/7f3c2f22-486a-4991-a6a3-cf3c647689da)
 
 
